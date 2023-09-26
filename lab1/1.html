@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ахметова Карина</title>
+    <style>
+        body {
+            background-color: rgba(255, 255, 255, 0.952);
+        }
+        #receipt {
+            border: 3px solid black;
+            padding: 15px;
+            width: 350px;
+            text-align: left;
+            background-color: white;
+            margin: 35px;
+        }
+    </style>
+    <script>
+        function calculateDiscount() {
+            var cost = parseFloat(prompt("Общая стоимость"));
+            var sale = parseFloat(prompt("Размер скидки"));
+
+            if (isNaN(cost) || isNaN(sale) || sale < 1 || sale > 5) {
+                alert("Некорректный ввод. Пожалуйста, введите число от 1 до 5");
+                return;
+            }
+
+            var finalySale = (cost * (sale / 100));
+            var finalyCost = (cost - finalySale);
+
+        
+
+            var receipt = document.getElementById("receipt");
+            receipt.innerHTML = "<h4>ООО `Евроторг`</h4>";
+            receipt.innerHTML += "<h2>СПАСИБО ЗА ПОКУПКУ!</h2>";
+            receipt.innerHTML += "<p>Дата покупки: " + new Date().toLocaleString() + "</p>";
+            receipt.innerHTML += "</b>";
+            receipt.innerHTML += "<h4>Итого: " + cost.toFixed(2) + " руб.</h4>";
+            receipt.innerHTML += "<p>Ваша скидка: " + finalySale.toFixed(2) + " руб.</p>";
+            receipt.innerHTML += "<h3>Сумма со скидкой: " + finalyCost.toFixed(2) + " руб.</h3>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Кассовый чек</h1>
+    <button onclick="calculateDiscount()">Рассчитать скидку</button>
+    <div id="receipt"></div>
+</body>
+</html>

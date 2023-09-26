@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-widht, iniciale-scale=1.0" />
+        <title>Ахметова Карина</title>
+      
+    </head>
+    <body>
+        <script>
+          "use strict";
+                    let a = parseFloat(prompt("Введите значение a:"));
+                    let h = parseFloat(prompt("Введите значение h:"));
+                    
+                    let S = ((a*h)/2);
+                    let alpha = (Math.atan((2*h)/a));
+                    var res = S;
+                    var res2 = alpha;
+                
+                    let z = parseFloat(prompt("Введите значение z:"));
+                    let x = parseFloat(prompt("Введите значение x:"));
+                    let y = parseFloat(prompt("Введите значение y:"));
+
+                    let b = (Math.pow(Math.log10(Math.abs(z)),2))/(Math.cbrt((Math.abs(x))+(Math.abs(y))));
+                    var res3 = b;
+
+                    const img = document.createElement("img");
+                         img.src = "vasya1.png";
+                          document.body.appendChild(img);
+                          
+                    const img1 = document.createElement("img");
+                         img1.src = "vasya2.png";
+                          document.body.appendChild(img1);
+
+
+                    document.write("<br><br>","S="+res.toFixed(2),"</b>");
+                    document.write("<br><br>","alpha="+res2.toFixed(2),"</b>");
+                    document.write("<br><br>","b="+res3.toFixed(2),"</b>");
+
+                    document.write("<br><br>Ахметова К.Р. 0216")
+
+        </script>
+    </body>
+ </html>
